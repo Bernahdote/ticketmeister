@@ -1,12 +1,14 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { createAgentPassMiddleware } from '@agent-id/nextjs';
+import type { NextRequest } from 'next/server';
 
-export function proxy(_request: NextRequest) {
-  const response = NextResponse.next();
-  response.headers.set("x-ticketmeister-middleware", "active");
-  return response;
+const agentPass = createAgentPassMiddleware();
+
+export function proxy(request: NextRequest) {
+  return agentPass(request);
 }
 
+// Protect your API routes
 export const config = {
-  matcher: ["/"]
+  matcher: '/:path*',
 };
+
