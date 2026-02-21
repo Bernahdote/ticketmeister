@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue-950: #0b1a4a;
+  --blue-900: #10296d;
+  --blue-700: #1f4ab8;
+  --blue-500: #2d6ef5;
+  --blue-100: #e8efff;
+  --text-main: #0f172a;
+  --text-soft: #3b4c72;
+  --surface: #ffffff;
+  --line: #d9e4ff;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle at top left, #eff4ff, #dce8ff 45%, #cfe0ff);
+  color: var(--text-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  border-bottom: 1px solid #1e3a8a33;
+  background: linear-gradient(90deg, var(--blue-950), var(--blue-700));
+}
+
+.nav {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 18px 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: #f5f8ff;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  margin-right: auto;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 10px 30px #1f4ab814;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+}
+
+.button {
+  display: inline-flex;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: linear-gradient(90deg, var(--blue-700), var(--blue-500));
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.button.secondary {
+  background: var(--blue-900);
+}
+
+.hero {
+  background: linear-gradient(145deg, #ffffff, #edf3ff 65%, #dce8ff);
+}
+
+.kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 12px;
+  color: var(--blue-700);
+  font-weight: 700;
+}
+
+.cta-row {
+  margin-top: 8px;
+}
+
+.concert-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.concert-item {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fafdff, #edf4ff);
+  padding: 12px 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.concert-item p {
+  margin: 4px 0 0;
+  color: var(--text-soft);
+}
+
+.hint {
+  margin: 0;
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.perk-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: #082052;
+}
+
+@media (max-width: 640px) {
+  .concert-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
