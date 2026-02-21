@@ -1,6 +1,6 @@
 # TicketMeister
 
-Next.js website for TicketMeister with a lightweight request middleware.
+Next.js website for TicketMeister with a lightweight request `proxy.ts`.
 
 ## Run locally
 
@@ -11,9 +11,8 @@ npm run dev
 
 Open http://localhost:3000
 
-## Middleware behavior
+## Request proxy behavior
 
-- Runs before app routes (excluding Next static/image assets and `favicon.ico`)
+- Runs before the homepage route (`/`)
 - Adds response headers:
   - `x-ticketmeister-middleware: active`
-  - `x-request-path: <pathname>`
