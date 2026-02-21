@@ -1,10 +1,10 @@
-import { createAgentPassMiddleware } from '@agent-id/nextjs';
+import { createAgentIDMiddleware } from '@agent-id/nextjs';
 import type { NextRequest } from 'next/server';
 
-const agentPass = createAgentPassMiddleware();
+const agentID = createAgentIDMiddleware();
 
 export function proxy(request: NextRequest) {
-  return agentPass(request);
+  return agentID(request);
 }
 
 // Protect your API routes
